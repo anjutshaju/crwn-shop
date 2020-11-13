@@ -1,9 +1,10 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
+require('dotenv').config();
 
 const config = {
-  apiKey: 'AIzaSyB7IuzqDj8f3U-VepWl9PJ5skuKUp_Bo24',
+  apiKey: process.env.REACT_APP_API_KEY,
   authDomain: 'crwn-db-7db18.firebaseapp.com',
   databaseURL: 'https://crwn-db-7db18.firebaseio.com',
   projectId: 'crwn-db-7db18',
