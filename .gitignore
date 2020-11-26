@@ -7,7 +7,6 @@
 .prettierrc
 .env
 /package-lock.json
-debug.log
 # testing
 /coverage
 
