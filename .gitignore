@@ -7,10 +7,12 @@
 .prettierrc
 .env
 /package-lock.json
-# testing
-/coverage
 yarn.lock
 .idea
+
+# testing
+/coverage
+
 
 # production
 /build
