@@ -1,10 +1,10 @@
 import React from 'react';
 import StripeCheckout from 'react-stripe-checkout';
-
+require('dotenv').config();
 const StripeCheckoutButton = ({ price }) => {
   const priceForStripe = price * 100;
-  const publishableKey =
-    'pk_test_51HsM3jHJbDDFAO2XUeUMyXQEwG4LepyjzZwpZR9KeCAqtIlwEFYPkQcRn8YXbaxFpRKw1uNqFhm6TGPoDq0TrgLU00PVPD8DlP';
+  const publishableKey = process.env.REACT_APP_PUBLISHABLE_KEY;
+
 
   const onToken = (token) => {
     console.log(token);
