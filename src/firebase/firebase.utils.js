@@ -1,6 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
+
 const config = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: 'crwn-db-7db18.firebaseapp.com',
@@ -11,6 +12,7 @@ const config = {
   appId: '1:752736088653:web:556dd203424f5072efe204',
   measurementId: 'G-RF86258CR5',
 };
+firebase.initializeApp(config);
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
@@ -57,7 +59,7 @@ export const convertCollectionsSnapshotToMap = (collectionsSnapshot) => {
   }, {});
 };
 
-firebase.initializeApp(config);
+
 
 export const getCurrentUser = () => {
   return new Promise((resolve, reject) => {
